@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full fixed border-b border-b-white/20  flex justify-between top-0  px-24 py-3 z-20 backdrop-blur-sm">
+    <div className="w-full fixed border-b border-b-white/20  flex justify-between top-0  px-24 py-3 z-50 backdrop-blur-sm">
       <div className="flex gap-8">
         <div className="w-fit flex gap-2 items-center justify-center ">
           <Image src={robot} />

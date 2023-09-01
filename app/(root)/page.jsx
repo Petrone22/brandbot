@@ -7,7 +7,8 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  Check,
+  Hash,
+  ChevronUp,
 } from "lucide-react";
 
 import {
@@ -17,11 +18,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { Card } from "@/components/ui/card";
+import BigCard from "@/components/bigCard";
+import BigCard2 from "@/components/bigCard2";
 
 import Image from "next/image";
 
-// import cardchart from "@/assets/cardChart.svg";
+import { Card } from "@/components/ui/card";
+
+import circleChart from "@/assets/circle.svg";
 
 const page = () => {
   return (
@@ -289,12 +293,12 @@ const page = () => {
           </svg>
         </div>
         <div className="flex flex-col items-center justify-center gap-8">
-          <div className="flex w-1/2 gap-2 flex-col text-center ">
-            <h1 className="flex flex-col font-medium text-center text-4xl md:text-7xl">
-              <span className="whitespace-nowrap">Grow a fanbase</span>
+          <div className="flex  gap-2 flex-col text-center w-full">
+            <h1 className="flex flex-col font-medium text-center w-full text-4xl md:text-7xl">
+              <span className="whitespace-nowrap w-full ">Grow a fanbase</span>
               <span className="text-primary">Reach millions</span>
             </h1>
-            <p className="pt-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium">
+            <p className="pt-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium  ">
               BrandBot is a reputation management software suite. <br />
               Get insight on what your fans, customers, business partners, or
               even competitors think about your work. from multiple different
@@ -365,75 +369,140 @@ const page = () => {
         </div>
       </div>
 
-      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2  gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 mt-20 ">
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-6 px-6 py-4 flex justify-between text-primary-foreground">
-          <div className="w-1/3 flex flex-col justify-between">
-            <div className="flex flex-col gap-2">
-              <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center mb-4">
-                <Instagram size={30} color="rgb(51,152,106)" />
-              </div>
-              <h2 className="font-semibold">Database</h2>
-              <p className="text-sm text-muted-foreground">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dignissimos quis provident eaque, necessitatibus architecto
-                minus.
-              </p>
+      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2  gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 mt-20 px-8">
+        <BigCard
+          description={
+            " Whenever someone mentions the keywords you keep track of, BrandBot automatically notifies you through a clean, easy metrics ui."
+          }
+          title={"Powerful Metrics"}
+        />
+        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-0 py-4 text-primary-foreground flex-col overflow-hidden group">
+          <div className="flex flex-col gap-2 items-center  text-center md:text-start px-6">
+            <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
+              <Instagram size={30} color="rgb(51,152,106)" />
             </div>
-            <div className="flex flex-col gap-2">
-              <span className="text-xs text-foreground flex gap-2">
-                <Check size={15} color="rgb(51,152,106)" />
-                Trusted by customers
-              </span>
-              <span className="text-xs text-foreground flex gap-2">
-                <Check size={15} color="rgb(51,152,106)" />
-                Trusted by customers
-              </span>
-              <span className="text-xs text-foreground flex gap-2">
-                <Check size={15} color="rgb(51,152,106)" />
-                Trusted by customers
-              </span>
-            </div>
+            <h2 className="font-semibold whitespace-nowrap text-center w-full">
+              Keyword tracking
+            </h2>
+            <p className="text-sm text-muted-foreground text-center">
+              Track Keywords for every project you create, you can even see what
+              people think about your competitors!
+            </p>
           </div>
-          <div className="min-w-1/3 w-1/3 flex items-center justify-center relative">
-            <div className="absolute w-10 h-full bg-gradient-to-r from-card  left-0"></div>
-            <div className="absolute w-10 h-full bg-gradient-to-l from-card  right-0"></div>
-            {/* <Image src={cardchart} width={1000} height={500} /> */}
+          <div className="grid h-full w-full scale-105 rounded-lg gap-2 mt-6 grid-cols-10">
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold ">
+              #LeagueOfLegends
+            </div>
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold  ">
+              Taylor Swift
+            </div>
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold  group-hover:border-primary group-hover:text-accent transition duration-300 group-hover:shadow-2xl shadow-primary">
+              Apartment For Sale
+            </div>
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold  group-hover:border-primary group-hover:text-accent transition duration-300 group-hover:shadow-2xl shadow-primary">
+              #Jennys_Bakery
+            </div>
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold ">
+              #Restaurant
+            </div>
+            <div className="border border-muted px-2 lg:text-xs w-full col-span-5 h-16 rounded-lg flex items-center justify-center text-secondary font-semibold ">
+              #Esports
+            </div>
           </div>
         </Card>
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-6 py-4 text-primary-foreground"></Card>
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-6 py-4 text-primary-foreground"></Card>
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-6 py-4 text-primary-foreground"></Card>
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-6 py-4 text-primary-foreground"></Card>
-        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-6 flex px-6 py-4 text-primary-foreground"></Card>
+        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-0 py-4 text-primary-foreground flex-col overflow-hidden group">
+          <div className="flex flex-col gap-2 items-center  text-center md:text-start px-6">
+            <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
+              <Instagram size={30} color="rgb(51,152,106)" />
+            </div>
+            <h2 className="font-semibold whitespace-nowrap text-center w-full">
+              Advanced AI Features
+            </h2>
+            <p className="text-sm text-muted-foreground text-center">
+              With the power of Artificial Intelligence, BrandBot gives you
+              reports, helpful tips, and even warnings to help you grow your
+              business as fast as possible.
+            </p>
+          </div>
+          <div className="flex items-center justify-center h-full w-full rounded-lg relative overflow-hidden">
+            <div className="absolute w-full h-24  bottom-0 bg-gradient-to-t from-card to-transparent  z-50"></div>
+            <div className="h-2/3 w-10/12 rounded-lg bg-muted border border-secondary  flex gap-2 flex-col p-2 transition duration-300 group-hover:scale-90 group-hover:rotate-3 group-hover:border-primary">
+              <div className="bg-muted-foreground group-hover:bg-accent w-5 h-5 rounded-full transition duration-300"></div>
+              <div className="bg-muted-foreground w-3/6 h-6 rounded-lg"></div>
+              <div className="bg-muted-foreground w-4/6 h-6 rounded-lg"></div>
+            </div>
+            <div className="h-2/3 w-10/12 rounded-lg bg-muted border border-secondary mt-16 flex gap-2 flex-col p-2 absolute top-32 transition duration-300 group-hover:-translate-y-32 group-hover:border-primary">
+              <div className="bg-muted-foreground w-5 group-hover:bg-accent h-5 rounded-full transition duration-300"></div>
+              <div className="bg-muted-foreground w-4/6 h-5 rounded-lg"></div>
+              <div className="bg-muted-foreground w-6/6 h-5 rounded-lg"></div>
+            </div>
+          </div>
+        </Card>
+        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex flex-col px-6 py-4 text-primary-foreground group overflow-hidden">
+          <div className="flex flex-col gap-2 items-center  text-center md:text-start px-0">
+            <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
+              <Instagram size={30} color="rgb(51,152,106)" />
+            </div>
+            <h2 className="font-semibold whitespace-nowrap text-center w-full">
+              Sentiment Analysis
+            </h2>
+            <p className="text-sm text-muted-foreground text-center">
+              BrandBot will analyse opinions based on your keywords and organize
+              them into groups of positive, neutral or negative opinions, So
+              yuou can make smarter business decisions
+            </p>
+          </div>
+          <div className="flex items-center justify-center h-full w-full rounded-lg relative ">
+            <Image
+              src={circleChart}
+              className="group-hover:rotate-90 transition duration-300 "
+            />
+            <div className="w-20 h-8 bg-muted absolute rounded-lg group-hover:translate-x-28 group-hover:translate-y-14 opacity-0 group-hover:opacity-100 -top-10 -left-32  transition duration-300 flex gap-1 items-center justify-start">
+              <div className="bg-muted-foreground h-4 w-4 rounded-full ml-2 "></div>
+              <div className="w-full h-4 rounded-lg bg-muted-foreground flex-1 group-hover:bg-primary mr-1"></div>
+            </div>
+            <div className="w-20 h-8 bg-muted absolute rounded-lg -top-10 left-80 group-hover:-translate-x-32 ml-1 opacity-0 group-hover:opacity-100 group-hover:translate-y-20  transition duration-300 flex gap-2 items-center justify-start">
+              <div className="bg-muted-foreground h-4 w-4 rounded-full ml-2 "></div>
+              <div className="w-full h-4 rounded-lg bg-muted-foreground flex-1 mr-1"></div>
+            </div>
+            <div className="w-20 h-8 bg-muted absolute rounded-lg  -bottom-20 -left-32 opacity-0 group-hover:opacity-100 group-hover:translate-x-32 group-hover:-translate-y-24 -ml-1 transition duration-300 flex gap-2 items-center justify-start">
+              <div className="bg-muted-foreground h-4 w-4 rounded-full ml-2  group-hover:bg-primary"></div>
+              <div className="w-full h-4 rounded-lg bg-muted-foreground flex-1 mr-1"></div>
+            </div>
+          </div>
+        </Card>
+        <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex flex-col group px-6 py-4 text-primary-foreground overflow-hidden">
+          <div className="flex flex-col gap-2 items-center  text-center md:text-start px-0">
+            <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
+              <Instagram size={30} color="rgb(51,152,106)" />
+            </div>
+            <h2 className="font-semibold whitespace-nowrap text-center w-full">
+              Competitor Spying
+            </h2>
+            <p className="text-sm text-muted-foreground text-center">
+              By creating a project in your account to track keywords for your
+              competitor, you'll know what they're up to. That will allow you to
+              improve your business plan.
+            </p>
+          </div>
+          <div className=" h-full w-full rounded-lg relative ">
+            <div className="w-full flex items-center justify-center h-full z-10 absolute -left-14 rotate-12 group-hover:rotate-0 group-hover:translate-x-6 transition duration-300">
+              <Hash color="#5d5d5d" size={200} />
+            </div>
+            <div className="w-full flex items-center justify-center h-full z-20 absolute top-10 left-20 rotate-0 group-hover:rotate-12 group-hover:-translate-y-10 group-hover:-translate-x-6 transition duration-300">
+              <Hash color="#33996B" size={200} />
+            </div>
+          </div>
+        </Card>
+        <BigCard2
+          title={"Critical Mentions"}
+          description={
+            "BrandBot allows you to keep a keen eye on anything negative being said about your keywords by pushing negative opinions to you as fast as possible so you never miss them."
+          }
+        />
       </div>
     </>
   );
 };
 
 export default page;
-{
-  /* <div className="flex flex-col justify-between max-w-xs">
-              <div className="flex flex-col gap-2">
-                <div className="h-12 w-12 bg-background flex items-center justify-center rounded-lg mb-4">
-                  <Twitter size={30} color="rgb(62,207,142)" />
-                </div>
-                <h2 className="font-semibold">Database</h2>
-                <p className="text-muted-foreground text-sm w-2/3">
-                  Every project is a full postgres database, the world's most
-                  trusted relational database.
-                </p>
-              </div>
-              <div className="flex flex-col">
-                <ul className="flex gap-1 flex-nowrap items-center justify-start text-sm text-muted-foreground">
-                  <Check color="rgb(62,207,142)" size={15} /> 100% trusted by us
-                </ul>
-                <ul className="flex gap-1 flex-nowrap items-center justify-start text-sm text-muted-foreground">
-                  <Check color="rgb(62,207,142)" size={15} /> 100% trusted by us
-                </ul>
-                <ul className="flex gap-1 flex-nowrap items-center justify-start text-sm text-muted-foreground">
-                  <Check color="rgb(62,207,142)" size={15} /> 100% trusted by us
-                </ul>
-              </div>
-            </div>
-            <div className=" w-full">foo</div> */
-}
