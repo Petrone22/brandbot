@@ -8,7 +8,9 @@ import {
   Linkedin,
   Youtube,
   Hash,
-  ChevronUp,
+  BellRing,
+  Globe,
+  Briefcase,
 } from "lucide-react";
 
 import {
@@ -27,12 +29,14 @@ import { Card } from "@/components/ui/card";
 
 import circleChart from "@/assets/circle.svg";
 
+import dots from "@/assets/dots.svg";
+
 const page = () => {
   return (
     <>
       <div className="bg-background mt-0 pt-52 h-full flex flex-col items-center justify-start text-primary-foreground bg-gradient-to-b from-black to-background relative">
         <div
-          className="absolute w-full h-full top-0 pointer-events-none "
+          className="absolute w-full h-fit top-0 pointer-events-none "
           style={{
             backgroundImage: `url(./home-bg.webp)`,
           }}
@@ -293,12 +297,12 @@ const page = () => {
           </svg>
         </div>
         <div className="flex flex-col items-center justify-center gap-8">
-          <div className="flex  gap-2 flex-col text-center w-full">
+          <div className="flex  gap-2 flex-col text-center items-center w-full ">
             <h1 className="flex flex-col font-medium text-center w-full text-4xl md:text-7xl">
               <span className="whitespace-nowrap w-full ">Grow a fanbase</span>
               <span className="text-primary">Reach millions</span>
             </h1>
-            <p className="pt-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium  ">
+            <p className="p-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium lg:w-2/3">
               BrandBot is a reputation management software suite. <br />
               Get insight on what your fans, customers, business partners, or
               even competitors think about your work. from multiple different
@@ -369,7 +373,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2  gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 mt-20 px-8">
+      <div className="h-fit w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 px-8 ">
         <BigCard
           description={
             " Whenever someone mentions the keywords you keep track of, BrandBot automatically notifies you through a clean, easy metrics ui."
@@ -500,6 +504,67 @@ const page = () => {
             "BrandBot allows you to keep a keen eye on anything negative being said about your keywords by pushing negative opinions to you as fast as possible so you never miss them."
           }
         />
+      </div>
+      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-full pt-24 lg:pt-32">
+        <div className="w-full h-full rounded-lg  flex flex-col lg:flex-row items-center justify-between">
+          <div className=" h-full w-full lg:w-1/3 flex items-center lg:items-start flex-col justify-center gap-4 ">
+            <h1 className="font-medium text-center lg:text-start w-full text-4xl md:text-5xl">
+              <span className="text-primary font-bold ">10+</span> Years of
+              experience
+            </h1>
+            <h3 className="text-muted-foreground text-center lg:text-start w-full">
+              {"We’re experts, and here’s the proof."}
+            </h3>
+            <Button size="lg" className="mt-6">
+              Sign up free
+            </Button>
+          </div>
+          <div className="group h-full w-5/6 -ml-14 lg:w-1/3 bg-muted rounded-xl flex flex-col px-6 items-start lg:items-center justify-between py-12 lg:py-6 gap-10 lg:gap-0 mt-16 lg:mt-0 relative">
+            <div className="w-32 lg:w-3/5 flex flex-col items-start gap-1">
+              <BellRing
+                size={38}
+                color="#3FCF8E"
+                className="mb-2 lg:mb-5 scale-75 lg:scale-100"
+              />
+              <h1 className="font-bold text-2xl lg:text-5xl  group-hover:text-accent transition duration-300 ">
+                18B+
+              </h1>
+              <p className=" font-semibold">
+                MENTIONS <br /> DELIVERED
+              </p>
+            </div>
+            <div className=" w-40 mt-10 lg:mt-0 lg:w-3/5 flex flex-col items-start gap-1">
+              <Globe
+                size={38}
+                color="#3FCF8E"
+                className="mb-2 lg:mb-5 scale-75 lg:scale-100"
+              />
+              <h1 className="font-bold text-4xl lg:text-5xl group-hover:text-accent transition duration-300 delay-75">
+                124
+              </h1>
+              <p className="font-semibold w-full lg:w-4/6">
+                WE'RE CURRENTLY WORKING WITH CUSTOMERS FROM 124 COUNTRIES
+              </p>
+            </div>
+            <div className=" h-60 w-40 absolute -right-16 -top-8 lg:-left-24 lg:top-32 flex flex-col items-center lg:items-end justify-between gap-8 ">
+              <Image
+                src={dots}
+                className="-left-20 z-20 scale-75 lg:scale-100 lg:group-hover:scale-150 transition duration-300 lg:group-hover:-translate-y-20 lg:group-hover:-translate-x-12"
+              />
+              <div className="w-fit  h-fit p-1 group-hover:bg-accent transition duration-300 bg-border rounded-lg">
+                <div className=" w-fit flex flex-col bg-muted p-4 pr-12 lg:pr-0 rounded-lg items-start gap-1">
+                  <Briefcase size={35} color="#3FCF8E" className="mb-5" />
+                  <h1 className="font-bold text-4xl group-hover:text-accent transition duration-300 delay-200">
+                    25M
+                  </h1>
+                  <p className=" font-semibold">
+                    ACTIVE MONITORED <br /> DOMAINS
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
