@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
-import { Instagram, Check } from "lucide-react";
+import { BarChart4, Check } from "lucide-react";
 const BigCard = ({ description, title }) => {
   const [hovered, setIsHovered] = useState(false);
   return (
@@ -18,7 +18,7 @@ const BigCard = ({ description, title }) => {
       <div className="w-full md:w-1/3  flex flex-col justify-between ">
         <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-start">
           <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center mb-4">
-            <Instagram size={30} color="rgb(51,152,106)" />
+            <BarChart4 size={30} color="rgb(51,152,106)" />
           </div>
           <h2 className="font-semibold whitespace-nowrap">{title}</h2>
           <p className="text-sm text-muted-foreground">{description}</p>

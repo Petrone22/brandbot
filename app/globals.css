@@ -59,8 +59,9 @@ root {
     --destructive-foreground: 0 0% 98%;
 
     --border: 0, 1%, 51%;
-    --input: 0, 0%, 16%;
-    --ring: 0 0% 3.9%;
+    --input: 0, 1%, 51%;
+    /* --ring: 0 0% 3.9%; */
+    --ring: 0 0% 40%;
 
     --radius: 0.5rem;
   }

@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
-import { Instagram, Check, ChevronUp } from "lucide-react";
+import { Check, ChevronUp, AlertCircle } from "lucide-react";
 const BigCard2 = ({ description, title }) => {
   const [hovered, setIsHovered] = useState(false);
   return (
@@ -18,7 +18,7 @@ const BigCard2 = ({ description, title }) => {
       <div className="w-full md:w-1/3  flex flex-col justify-between ">
         <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-start">
           <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center mb-4">
-            <Instagram size={30} color="rgb(51,152,106)" />
+            <AlertCircle size={30} color="rgb(51,152,106)" />
           </div>
           <h2 className="font-semibold whitespace-nowrap">{title}</h2>
           <p className="text-sm text-muted-foreground">{description}</p>
@@ -49,15 +49,15 @@ const BigCard2 = ({ description, title }) => {
         </div>
         <div className="w-full flex flex-col absolute z-0 opacity-0 group-hover:opacity-100 transition duration-300 mt-9 gap-2">
           <div className="w-full bg-muted rounded-lg h-8 flex gap-2 items-center px-2 ">
-            <div className="w-4 h-4 rounded-full bg-muted-foreground "></div>
+            <div className="w-4 h-4 rounded-full bg-red-800 "></div>
             <div className="w-2/4 h-4 rounded-md bg-muted-foreground "></div>
           </div>
           <div className="w-full bg-muted rounded-lg h-8 flex gap-2 items-center px-2 ">
-            <div className="w-4 h-4 rounded-full bg-muted-foreground "></div>
+            <div className="w-4 h-4 rounded-full bg-accent "></div>
             <div className="w-3/4 h-4 rounded-md bg-muted-foreground "></div>
           </div>
           <div className="hidden w-full bg-muted rounded-lg h-8 md:flex gap-2 items-center px-2 ">
-            <div className="w-4 h-4 rounded-full bg-muted-foreground "></div>
+            <div className="w-4 h-4 rounded-full bg-accent "></div>
             <div className="w-3/4 h-4 rounded-md bg-muted-foreground "></div>
           </div>
         </div>

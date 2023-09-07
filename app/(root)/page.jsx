@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import robot from "@/assets/robot.svg";
 import {
   BookMarked,
   Facebook,
@@ -11,6 +11,10 @@ import {
   BellRing,
   Globe,
   Briefcase,
+  KeyRound,
+  BrainCircuit,
+  FlaskRound,
+  ZoomIn,
 } from "lucide-react";
 
 import {
@@ -30,6 +34,59 @@ import { Card } from "@/components/ui/card";
 import circleChart from "@/assets/circle.svg";
 
 import dots from "@/assets/dots.svg";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+const reviews = [
+  {
+    name: "@KevCodez",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "And thanks to @BrandBot, I was able to go from idea to launched feature in a matter of hours. Absolutely amazing!",
+  },
+  {
+    name: "@DanaWhite",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "using brandbot is lit!! it took me less than 10 mins to setup, the experience is just amazing",
+  },
+  {
+    name: "@keeganLemer",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "i'm never going to look back, my business grew by like 30% based on the recommendations that brandbot gave me and the insights it gives are just so important.",
+  },
+  {
+    name: "@SundeepRunsIt",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "i wanna admit, the competition spying feature that you get with @BrandBot is so useful, we completely revamped our business and now we're profitable",
+  },
+  {
+    name: "@AdamDXD",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "Huuuuge thanks to BrandBot for helping me with my online personality monitoring, i was able to gain more than 70K TikTok followers just by LISTENING to my fans.",
+  },
+  {
+    name: "@RasheedKebab",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "We just opened another store, we're confident that our customers love our food because we were able to see that through @BrandBot",
+  },
+  {
+    name: "@MysticEntrepreneur",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "Working with @BrandBot is just fun, easy, and most importantly, accurate. I love it so much",
+  },
+  {
+    name: "@_tarantinooo_",
+    badge: "https://github.com/shadcn.png",
+    description:
+      "How and why did nobody tell me about @BrandBot sooner?? It's so incredible!",
+  },
+];
 
 const page = () => {
   return (
@@ -305,7 +362,7 @@ const page = () => {
             <p className="p-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium lg:w-2/3">
               BrandBot is a reputation management software suite. <br />
               Get insight on what your fans, customers, business partners, or
-              even competitors think about your work. from multiple different
+              even competitors think about your work. From multiple different
               platforms.
             </p>
           </div>
@@ -383,7 +440,7 @@ const page = () => {
         <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-0 py-4 text-primary-foreground flex-col overflow-hidden group">
           <div className="flex flex-col gap-2 items-center  text-center md:text-start px-6">
             <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
-              <Instagram size={30} color="rgb(51,152,106)" />
+              <KeyRound size={30} color="rgb(51,152,106)" />
             </div>
             <h2 className="font-semibold whitespace-nowrap text-center w-full">
               Keyword tracking
@@ -417,7 +474,7 @@ const page = () => {
         <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex px-0 py-4 text-primary-foreground flex-col overflow-hidden group">
           <div className="flex flex-col gap-2 items-center  text-center md:text-start px-6">
             <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
-              <Instagram size={30} color="rgb(51,152,106)" />
+              <BrainCircuit size={30} color="rgb(51,152,106)" />
             </div>
             <h2 className="font-semibold whitespace-nowrap text-center w-full">
               Advanced AI Features
@@ -445,7 +502,7 @@ const page = () => {
         <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex flex-col px-6 py-4 text-primary-foreground group overflow-hidden">
           <div className="flex flex-col gap-2 items-center  text-center md:text-start px-0">
             <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
-              <Instagram size={30} color="rgb(51,152,106)" />
+              <FlaskRound size={30} color="rgb(51,152,106)" />
             </div>
             <h2 className="font-semibold whitespace-nowrap text-center w-full">
               Sentiment Analysis
@@ -458,6 +515,7 @@ const page = () => {
           </div>
           <div className="flex items-center justify-center h-full w-full rounded-lg relative ">
             <Image
+              alt="chart"
               src={circleChart}
               className="group-hover:rotate-90 transition duration-300 "
             />
@@ -478,7 +536,7 @@ const page = () => {
         <Card className="w-full h-[400px] col-span-5 md:col-span-6 lg:col-span-3 flex flex-col group px-6 py-4 text-primary-foreground overflow-hidden">
           <div className="flex flex-col gap-2 items-center  text-center md:text-start px-0">
             <div className="bg-background h-14 w-14 rounded-lg flex items-center justify-center">
-              <Instagram size={30} color="rgb(51,152,106)" />
+              <ZoomIn size={30} color="rgb(51,152,106)" />
             </div>
             <h2 className="font-semibold whitespace-nowrap text-center w-full">
               Competitor Spying
@@ -505,7 +563,7 @@ const page = () => {
           }
         />
       </div>
-      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-full pt-24 lg:pt-32">
+      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-full pt-24 lg:pt-32 overflow-hidden">
         <div className="w-full h-full rounded-lg  flex flex-col lg:flex-row items-center justify-between">
           <div className=" h-full w-full lg:w-1/3 flex items-center lg:items-start flex-col justify-center gap-4 ">
             <h1 className="font-medium text-center lg:text-start w-full text-4xl md:text-5xl">
@@ -557,10 +615,131 @@ const page = () => {
                   <h1 className="font-bold text-4xl group-hover:text-accent transition duration-300 delay-200">
                     25M
                   </h1>
-                  <p className=" font-semibold">
+                  <p className=" font-semibold whitespace-nowrap mr-16">
                     ACTIVE MONITORED <br /> DOMAINS
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-fit pt-24 lg:pt-32">
+        <div className="w-full h-full rounded-lg flex flex-col items-start justify-around gap-24">
+          <div className="w-full flex flex-col  items-center md:items-start gap-6">
+            <p className="text-sm text-muted-foreground text-center">
+              CUSTOMER STORIES
+            </p>
+            <h1 className="font-medium text-center lg:text-start w-full  text-lg md:text-5xl flex gap-2">
+              <Image
+                src={robot}
+                className="hidden md:block md:scale-110 lg:scale-125"
+              />
+              <span className="text-primary font-bold flex items-center gap-1">
+                BrandBot
+              </span>{" "}
+              helps you scale with ease.
+            </h1>
+            <p className="text-lg text-center lg:text-start">
+              See how <span className="text-primary">BrandBot</span> empowers
+              companies and personalities of all sizes to accelerate their
+              growth <br />
+              and streamline their work.
+            </p>
+          </div>
+          <div className="w-full flex flex-wrap  items-start justify-center scroll-smooth - gap-6 ">
+            {reviews.map((review) => {
+              return (
+                <Card className="max-w-[400px] flex flex-col gap-4 group px-6 py-4 pb-12 text-primary-foreground overflow-hidden hover:border-primary">
+                  <h1 className="flex gap-2 items-end w-full text-sm font-semibold">
+                    <Avatar>
+                      <AvatarImage src={review.badge} alt="icon" />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <span>{review.name}</span>
+                  </h1>
+                  <p className="text-muted-foreground h-full whitespace-break-spaces ">
+                    {review.description}
+                  </p>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-full pt-24 lg:pt-32 flex items-center justify-center">
+        <div className="h-fit w-full bg-card rounded-xl flex flex-col items-center justify-center gap-4 py-8 mb-16">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex  gap-0 flex-col text-center items-center w-full ">
+              <h1 className="flex flex-col gap-2 font-medium text-center w-full text-4xl md:text-5xl">
+                <span className="whitespace-nowrap w-full ">
+                  Grow your fanbase
+                </span>
+                <span className="text-primary">Reach millions</span>
+              </h1>
+              <p className="p-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium lg:w-2/3 text-muted-foreground">
+                Sign up now and get 2 weeks for free!
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <Button size="lg">Sign up free</Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
+                <BookMarked size={20} />
+                View Features
+              </Button>
+            </div>
+            <div className="flex flex-col gap-4 justify-center text-center mt-5">
+              <p className="text-muted-foreground">
+                Reliable opinions from 20+ platforms, including:
+              </p>
+              <div className="flex items-center justify-center gap-4 ">
+                <TooltipProvider delayDuration={50}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Facebook size={30} color="rgb(153,153,153)" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Facebook</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Twitter size={30} color="rgb(153,153,153)" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Twitter</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Instagram size={30} color="rgb(153,153,153)" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Instagram</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Youtube size={30} color="rgb(153,153,153)" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Youtube</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Linkedin size={30} color="rgb(153,153,153)" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>LinkedIn</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
             </div>
           </div>
