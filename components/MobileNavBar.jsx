@@ -3,25 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 
-const navLinks = [
-  {
-    name: "Features",
-    to: "/",
-  },
-  {
-    name: "Pricing",
-    to: "/",
-  },
-  {
-    name: "Reviews",
-    to: "/",
-  },
-  {
-    name: "Help",
-    to: "/",
-  },
-];
-
 const MobileNavBar = () => {
   return (
     <Sheet>
@@ -34,13 +15,18 @@ const MobileNavBar = () => {
         side="left"
         className="flex flex-col gap-8 items-center pt-24"
       >
-        {navLinks.map((link) => {
-          return (
-            <Button variant="link" className="w-full  rounded-none pb-8 mb-4">
-              <Link href={link.to}>{link.name}</Link>
-            </Button>
-          );
-        })}
+        <Button variant="link">
+          <a href="#features">Features</a>
+        </Button>
+        <Button variant="link">
+          <Link href={"/pricing"}>Pricing</Link>
+        </Button>
+        <Button variant="link">
+          <a href="#reviews">Reviews</a>
+        </Button>
+        <Button variant="link">
+          <Link href={"/help"}>Help</Link>
+        </Button>
       </SheetContent>
     </Sheet>
   );

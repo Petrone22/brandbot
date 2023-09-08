@@ -4,29 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import NavbarDashboard from "./NavbarDashboard";
 
 const MobileNavBar = dynamic(() => import("@/components/MobileNavBar"), {
   ssr: false,
 });
-
-const navLinks = [
-  {
-    name: "Features",
-    to: "/",
-  },
-  {
-    name: "Pricing",
-    to: "/",
-  },
-  {
-    name: "Reviews",
-    to: "/",
-  },
-  {
-    name: "Help",
-    to: "/",
-  },
-];
 
 const Navbar = () => {
   return (
@@ -42,22 +24,22 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex gap-1">
-          {navLinks.map((link) => {
-            return (
-              <Button variant="link">
-                <Link href={link.to}>{link.name}</Link>
-              </Button>
-            );
-          })}
+          <Button variant="link">
+            <a href="#features">Features</a>
+          </Button>
+          <Button variant="link">
+            <Link href={"/pricing"}>Pricing</Link>
+          </Button>
+          <Button variant="link">
+            <a href="#reviews">Reviews</a>
+          </Button>
+          <Button variant="link">
+            <Link href={"/help"}>Help</Link>
+          </Button>
         </div>
       </div>
       <div className="w-fit flex items-center justify-center gap-2">
-        <Button size="sm" variant="secondary" className="text-sm">
-          <Link href={"/sign-in"}> Sign in</Link>
-        </Button>
-        <Button size="sm" className="font-semibold">
-          <Link href={"/sign-up"}> Sign up free</Link>{" "}
-        </Button>
+        <NavbarDashboard />
       </div>
     </div>
   );

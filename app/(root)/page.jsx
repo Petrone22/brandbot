@@ -366,18 +366,25 @@ const page = () => {
               platforms.
             </p>
           </div>
-          <div className="flex gap-2">
-            <Button size="lg">Sign up free</Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="flex items-center justify-center gap-2"
-            >
-              <BookMarked size={20} />
-              View Features
-            </Button>
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-2">
+              <Button size="lg">Sign up free</Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
+                <a href="#features" className="flex gap-2">
+                  <BookMarked size={20} />
+                  View Features
+                </a>
+              </Button>
+            </div>
+            <p className="w-full text-center text-white/60 font-medium select-none">
+              14 day free trial.
+            </p>
           </div>
-          <div className="flex flex-col gap-4 justify-center text-center mt-5">
+          <div className="flex flex-col gap-4 justify-center text-center mt-5 mb-10">
             <p className="text-muted-foreground">
               Reliable opinions from 20+ platforms, including:
             </p>
@@ -430,7 +437,10 @@ const page = () => {
         </div>
       </div>
 
-      <div className="h-fit w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 px-8 ">
+      <div
+        className="relative h-fit w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-12 lg:gap-6 md:px-12 lg:px-24 px-8 "
+        id="features"
+      >
         <BigCard
           description={
             " Whenever someone mentions the keywords you keep track of, BrandBot automatically notifies you through a clean, easy metrics ui."
@@ -562,8 +572,11 @@ const page = () => {
             "BrandBot allows you to keep a keen eye on anything negative being said about your keywords by pushing negative opinions to you as fast as possible so you never miss them."
           }
         />
+        <span className="absolute w-full -bottom-12 text-center mt-4 text-white/60 select-none">
+          And so much more!
+        </span>
       </div>
-      <div className="md:px-12 lg:px-24 px-8 h-fit lg:h-full pt-24 lg:pt-32 overflow-hidden">
+      <div className=" md:px-12 lg:px-24 px-8 h-fit lg:h-screen pt-24 lg:mt-28 overflow-hidden">
         <div className="w-full h-full rounded-lg  flex flex-col lg:flex-row items-center justify-between">
           <div className=" h-full w-full lg:w-1/3 flex items-center lg:items-start flex-col justify-center gap-4 ">
             <h1 className="font-medium text-center lg:text-start w-full text-4xl md:text-5xl">
@@ -576,6 +589,9 @@ const page = () => {
             <Button size="lg" className="mt-6">
               Sign up free
             </Button>
+            <p className="w-full text-center md:text-start text-white/60 font-medium">
+              14 day free trial.
+            </p>
           </div>
           <div className="group h-full w-5/6 -ml-14 lg:w-1/3 bg-muted rounded-xl flex flex-col px-6 items-start lg:items-center justify-between py-12 lg:py-6 gap-10 lg:gap-0 mt-16 lg:mt-0 relative">
             <div className="w-32 lg:w-3/5 flex flex-col items-start gap-1">
@@ -584,7 +600,7 @@ const page = () => {
                 color="#3FCF8E"
                 className="mb-2 lg:mb-5 scale-75 lg:scale-100"
               />
-              <h1 className="font-bold text-2xl lg:text-5xl  group-hover:text-accent transition duration-300 ">
+              <h1 className="font-bold text-2xl lg:text-3xl  group-hover:text-accent transition duration-300 ">
                 18B+
               </h1>
               <p className=" font-semibold">
@@ -597,7 +613,7 @@ const page = () => {
                 color="#3FCF8E"
                 className="mb-2 lg:mb-5 scale-75 lg:scale-100"
               />
-              <h1 className="font-bold text-4xl lg:text-5xl group-hover:text-accent transition duration-300 delay-75">
+              <h1 className="font-bold text-4xl lg:text-3xl group-hover:text-accent transition duration-300 delay-75">
                 124
               </h1>
               <p className="font-semibold w-full lg:w-4/6">
@@ -630,7 +646,7 @@ const page = () => {
             <p className="text-sm text-muted-foreground text-center">
               CUSTOMER STORIES
             </p>
-            <h1 className="font-medium text-center lg:text-start w-full  text-lg md:text-5xl flex gap-2">
+            <h1 className=" whitespace-nowrap font-medium text-center lg:text-start w-full  text-lg md:text-5xl flex gap-2">
               <Image
                 src={robot}
                 className="hidden md:block md:scale-110 lg:scale-125"
@@ -640,14 +656,17 @@ const page = () => {
               </span>{" "}
               helps you scale with ease.
             </h1>
-            <p className="text-lg text-center lg:text-start">
+            <p className="text-md text-center lg:text-start">
               See how <span className="text-primary">BrandBot</span> empowers
               companies and personalities of all sizes to accelerate their
               growth <br />
               and streamline their work.
             </p>
           </div>
-          <div className="w-full flex flex-wrap  items-start justify-center scroll-smooth - gap-6 ">
+          <div
+            className="w-full flex flex-wrap  items-start justify-center scroll-smooth - gap-6 "
+            id="reviews"
+          >
             {reviews.map((review) => {
               return (
                 <Card className="max-w-[400px] flex flex-col gap-4 group px-6 py-4 pb-12 text-primary-foreground overflow-hidden hover:border-primary">
