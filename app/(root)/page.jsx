@@ -696,7 +696,7 @@ const page = () => {
                 </span>
                 <span className="text-primary">Reach millions</span>
               </h1>
-              <p className="p-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium lg:w-2/3 text-muted-foreground">
+              <p className="p-2 my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg font-medium lg:w-2/3 text-white/60">
                 Sign up now and get 2 weeks for free!
               </p>
             </div>

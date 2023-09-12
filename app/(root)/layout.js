@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 
-export default function DashboardLayout({ children }) {
+export default function HomeLayout({ children }) {
   return (
     <>
       <Navbar />

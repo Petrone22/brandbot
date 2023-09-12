@@ -17,6 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        dashboard: {
+          DEFAULT: "#3D3D3D",
+          secondary: "#bfbfbf",
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

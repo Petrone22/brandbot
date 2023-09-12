@@ -1,7 +1,6 @@
 import Image from "next/image";
 import robot from "@/assets/robot.svg";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import NavbarDashboard from "./NavbarDashboard";
