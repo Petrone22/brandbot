@@ -5,13 +5,20 @@ export async function middleware(req) {
   let res = NextResponse.next();
   const pathname = req.url;
   const supabase = createMiddlewareClient({ req, res });
-  await supabase.auth.getSession();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  supabase.realtime.setAuth("fresh-token");
 
-  if (user) {
-    return;
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  if (session?.user) {
+    const user = await supabase.auth.getUser();
+
+    req.locals = {
+      supabase,
+      user,
+      session,
+    };
   } else {
     if (pathname.includes("/dashboard")) {
       res = NextResponse.redirect(new URL("/", req.url));
