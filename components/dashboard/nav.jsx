@@ -44,6 +44,7 @@ const Nav = async () => {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+
   return (
     <div className="w-full top-0 py-2 px-4 flex items-center justify-between gap-4 md:justify-between">
       <div className="flex items-start w-full gap-4">
@@ -182,11 +183,11 @@ const Nav = async () => {
           </Sheet>
         </div>
         <div className="w-fit flex gap-2 ">
-          <span className="text-xs font-semibold md:text-sm rounded-sm hover:bg-secondary px-2 cursor-pointer duration-150">
+          <span className="text-xs font-semibold md:text-sm rounded-sm hover:bg-dashboard px-2 cursor-pointer duration-150">
             {user.email}
           </span>
           <span className="text-xs md:text-sm ">/</span>
-          <span className="text-xs font-semibold md:text-sm rounded-sm hover:bg-secondary px-2 cursor-pointer duration-150">
+          <span className="text-xs font-semibold md:text-sm rounded-sm hover:bg-dashboard px-2 cursor-pointer duration-150">
             BrandBot
           </span>
         </div>
