@@ -552,9 +552,9 @@ const page = () => {
               Competitor Spying
             </h2>
             <p className="text-sm text-muted-foreground text-center">
-              By creating a project in your account to track keywords for your
+              {` By creating a project in your account to track keywords for your
               competitor, you'll know what they're up to. That will allow you to
-              improve your business plan.
+              improve your business plan.`}
             </p>
           </div>
           <div className=" h-full w-full rounded-lg relative ">
@@ -617,11 +617,12 @@ const page = () => {
                 124
               </h1>
               <p className="font-semibold w-full lg:w-4/6">
-                WE'RE CURRENTLY WORKING WITH CUSTOMERS FROM 124 COUNTRIES
+                {`WE'RE CURRENTLY WORKING WITH CUSTOMERS FROM 124 COUNTRIES`}
               </p>
             </div>
             <div className=" h-60 w-40 absolute -right-16 -top-8 lg:-left-24 lg:top-32 flex flex-col items-center lg:items-end justify-between gap-8 ">
               <Image
+                alt="image"
                 src={dots}
                 className="-left-20 z-20 scale-75 lg:scale-100 lg:group-hover:scale-150 transition duration-300 lg:group-hover:-translate-y-20 lg:group-hover:-translate-x-12"
               />
@@ -648,6 +649,7 @@ const page = () => {
             </p>
             <h1 className=" whitespace-nowrap font-medium text-center lg:text-start w-full  text-lg md:text-5xl flex gap-2">
               <Image
+                alt="image"
                 src={robot}
                 className="hidden md:block md:scale-110 lg:scale-125"
               />
@@ -669,7 +671,10 @@ const page = () => {
           >
             {reviews.map((review) => {
               return (
-                <Card className="max-w-[400px] flex flex-col gap-4 group px-6 py-4 pb-12 text-primary-foreground overflow-hidden hover:border-primary">
+                <Card
+                  className="max-w-[400px] flex flex-col gap-4 group px-6 py-4 pb-12 text-primary-foreground overflow-hidden hover:border-primary"
+                  key={review.name}
+                >
                   <h1 className="flex gap-2 items-end w-full text-sm font-semibold">
                     <Avatar>
                       <AvatarImage src={review.badge} alt="icon" />

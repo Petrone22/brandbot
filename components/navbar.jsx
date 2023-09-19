@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="hidden md:flex gap-8 ">
         <div className="w-fit flex gap-2 items-center justify-center cursor-pointer">
           <Link href={"/"} className="flex gap-2">
-            <Image src={robot} />
+            <Image alt="" src={robot} />
             <h2 className="font-bold text-2xl">BrandBot</h2>
           </Link>
         </div>

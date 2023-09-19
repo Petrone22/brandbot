@@ -31,7 +31,7 @@ const SideBar = () => {
       <TooltipProvider delayDuration={50}>
         <div className="">
           <Link href={"/dashboard"} className="flex gap-2">
-            <Image src={robot} />
+            <Image alt="" src={robot} />
           </Link>
         </div>
 

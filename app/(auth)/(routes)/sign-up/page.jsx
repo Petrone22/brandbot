@@ -68,10 +68,10 @@ const page = () => {
             <span className="text-[160px] leading-none text-muted">“</span>
           </div>
           <blockquote className="max-w-lg z-10 text-3xl text-foreground">
-            Working with BrandBot has been one of the best experiences I've had
+            {`  Working with BrandBot has been one of the best experiences I've had
             lately. Incredibly easy to set up, great workflow, and so many fewer
             hoops to jump through than the competition. I definitely plan to use
-            it on any and all future projects.
+            it on any and all future projects.`}
           </blockquote>
           <a className="flex items-center gap-4">
             <Image

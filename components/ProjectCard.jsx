@@ -41,7 +41,9 @@ const ProjectCard = async ({ id }) => {
         <div className="flex gap-2 items-center">
           {arr.map((hashtag) => {
             return (
-              <span className="text-sm text-muted-foreground">{hashtag}</span>
+              <span key={hashtag} className="text-sm text-muted-foreground">
+                {hashtag}
+              </span>
             );
           })}
         </div>
